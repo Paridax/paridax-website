@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    @apply outline-none;
+}
+
+.logo {
+    @apply text-white font-bold text-3xl select-none;
+    font-family: 'Sulphur Point', sans-serif;
+}
+
+.font-logo {
+    font-family: 'Sulphur Point', sans-serif;
+}
+
+html,
+body {
+    @apply w-full h-full bg-white text-gray-800;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+.button-sm-blue {
+    @apply flex items-center justify-around px-3 h-10 rounded-lg bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 outline-none text-sm transition-all;
+}
+
+.scrollbar-hidden {
+    scrollbar-width: none;
+    resize: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+/* ::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-200;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-gray-300 hover:bg-gray-400;
+} */
