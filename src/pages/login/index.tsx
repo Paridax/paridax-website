@@ -24,7 +24,7 @@ export const Login = () => {
         if (user) {
             navigate('/dashboard');
         } else {
-            // console.log('Not logged in');
+            console.log('Not logged in');
         }
     }, [user]);
 
@@ -36,7 +36,7 @@ export const Login = () => {
 
     React.useCallback(
         (e) => {
-            // console.log(username, password);
+            console.log(username, password);
         },
         [username, password]
     )
@@ -65,7 +65,7 @@ export const Login = () => {
                 getUserData()
                 .then((res) => {
                     setUser(res.data);
-                    // console.log(user);
+                    console.log(user);
                     setLoggingIn(false);
                     navigate('/dashboard');
                 });

@@ -18,10 +18,10 @@ export const DashboardCreateBlog = () => {
 
     React.useEffect(() => {
         if (!user) {
-            // console.log('Not logged in');
+            console.log('Not logged in');
             navigate('/login');
         }
-        // console.log(user);
+        console.log(user);
         if (!user.permissions.includes('OWNER')) {
             navigate('/dashboard');
         }
@@ -55,7 +55,7 @@ export const DashboardCreateBlog = () => {
     }
 
     if (user && !loading) {
-        // console.log(specific);
+        console.log(specific);
         return (
             <div>
                 <Navbar />

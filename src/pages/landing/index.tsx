@@ -36,7 +36,7 @@ export const Landing = (props: any) => {
                 console.log(data);
                 setBlogs(data.slice(0, 3));
             }).catch((err: Error) => {
-                // // console.log(err);
+                // console.log(err);
                 setLoading(false);
             });
     }, []);

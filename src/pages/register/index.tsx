@@ -25,7 +25,7 @@ export const Register = () => {
         if (user) {
             navigate('/dashboard');
         } else {
-            // console.log('Not logged in');
+            console.log('Not logged in');
         }
     }, []);
 
@@ -37,7 +37,7 @@ export const Register = () => {
 
     async function submitRegister(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         event.preventDefault();
-        // // console.log({ username: username, email: email, password: password, verifyPassword: verifyPassword });
+        // console.log({ username: username, email: email, password: password, verifyPassword: verifyPassword });
         if (password !== verifyPassword) {
             setErrorMessage("Your passwords do not match");
             return toggleError(true);
@@ -47,14 +47,14 @@ export const Register = () => {
 
         try {
             submitObject = { username: username, email: email, password: password };
-            // console.log(submitObject);
+            console.log(submitObject);
             await registerUser(submitObject)
             .then((res) => {
-                // console.log(res.data);
+                console.log(res.data);
                 if (res.data.redirect) {
                     loginUser({ username: username, password: password })
                     .then((res) => {
-                        // console.log(res.data);
+                        console.log(res.data);
                         setUser(res.data);
                         if (res.data.redirect === true) {
                             navigate('/dashboard');
@@ -88,28 +88,28 @@ export const Register = () => {
                                 <h1 className="font-semibold mt-1 text-gray-600 text-sm">Username</h1>
                                 <input type="text" name="user" className="my-0.5 border-gray-800 hover:border-primary transform focus:border-primary bg-offwhite shadow-inner border-2 rounded-md h-12 w-full ring-opacity-50 ring-primary transition-all focus:ring-4 p-2 duration-200 caret-primary" onChange={(e) => {
                                     setUsername(e.target.value);
-                                    // console.log(username, password);
+                                    console.log(username, password);
                                 }} />
                             </div>
                             <div className="w-full">
                                 <h1 className="font-semibold mt-1 text-gray-600 text-sm">Email</h1>
                                 <input type="text" name="user" className="my-0.5 border-gray-800 hover:border-primary transform focus:border-primary bg-offwhite shadow-inner border-2 rounded-md h-12 w-full ring-opacity-50 ring-primary transition-all focus:ring-4 p-2 duration-200 caret-primary" onChange={(e) => {
                                     setEmail(e.target.value);
-                                    // console.log(username, password);
+                                    console.log(username, password);
                                 }} />
                             </div>
                             <div className="w-full">
                                 <h1 className="font-semibold mt-1 text-gray-600 text-sm">Password</h1>
                                 <input type="password" name="user" className="my-0.5 border-gray-800 hover:border-primary transform focus:border-primary bg-offwhite shadow-inner border-2 rounded-md h-12 w-full ring-opacity-50 ring-primary transition-all focus:ring-4 p-2 duration-200 caret-primary" onChange={(e) => {
                                     setPassword(e.target.value);
-                                    // console.log(username, password);
+                                    console.log(username, password);
                                 }} />
                             </div>
                             <div className="w-full">
                                 <h1 className="font-semibold mt-1 text-gray-600 text-sm">Confirm Password</h1>
                                 <input type="password" name="user" className="my-0.5 border-gray-800 hover:border-primary transform focus:border-primary bg-offwhite shadow-inner border-2 rounded-md h-12 w-full ring-opacity-50 ring-primary transition-all focus:ring-4 p-2 duration-200 caret-primary" onChange={(e) => {
                                     setVerifyPassword(e.target.value);
-                                    // console.log(username, password);
+                                    console.log(username, password);
                                 }} />
                             </div>
                         </form>

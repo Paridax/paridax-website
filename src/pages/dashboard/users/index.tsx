@@ -16,7 +16,7 @@ export const DashboardViewUsers = () => {
     
     React.useEffect(() => {
         if (!user) {
-            // console.log('Not logged in');
+            console.log('Not logged in');
             navigate('/login');   
         }
         if (!user.permissions.includes('OWNER')) {
@@ -24,7 +24,7 @@ export const DashboardViewUsers = () => {
         }
         getUsers()
         .then((users) => {
-            // console.log(users.data);
+            console.log(users.data);
             setUsers(users.data);
         });
     }, []);
@@ -36,14 +36,14 @@ export const DashboardViewUsers = () => {
     }
 
     function formatDate(d: Date) {
-        const weekdays = ['Monday','Tuesday','Wednesday','Thurday','Friday','Saturday','Sunday'];
+        const weekdays = ['Sunday', 'Monday','Tuesday','Wednesday','Thurday','Friday','Saturday'];
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'];
         return `${d.getMonth()}/${d.getDate()}/${d.getFullYear()} ${d.toLocaleTimeString()}`;
     }
 
 
     if (users && user && !loading) {
-        // console.log(user);
+        console.log(user);
         return (
             <div>
                 <Navbar />
@@ -68,7 +68,7 @@ export const DashboardViewUsers = () => {
                                     <p className="font-semibold text-gray-600 col-span-2">Permissions</p>
                                 </div>
                                 {users.map((usr: any, i: any) => {
-                                    // console.log(usr);
+                                    console.log(usr);
                                     return (
                                         <button onClick={() => { navigate(`/dashboard/users/${usr.userId}`) }} className="w-full grid items-center h-12 grid-cols-11 px-2 my-1 border-2 hover:border-primary rounded duration-100 focus:border-primary" key={i}>
                                             <p className="text-left font-semibold col-span-1 w-full mr-auto text-ellipsis overflow-hidden whitespace-nowrap">{i + 1}</p>

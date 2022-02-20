@@ -20,15 +20,15 @@ export const BlogPost = (props: any) => {
     React.useEffect(() => {
         getBlogForGuest(postId)
             .then((res: any) => {
-                // // console.log('done');
-                // // console.log(res.data);
+                // console.log('done');
+                // console.log(res.data);
                 if (!res.data) {
                     navigate('/blog');
                 }
                 setBlog(res.data);
             })
             .catch((err) => {
-                // // console.log(err);
+                // console.log(err);
                 navigate('/blog');
             });
     }, []);

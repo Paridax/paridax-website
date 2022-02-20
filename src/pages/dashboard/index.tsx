@@ -14,7 +14,7 @@ export const Dashboard = () => {
     
     React.useEffect(() => {
         if (!user) {
-            // // console.log('Not logged in');
+            console.log('Not logged in');
             navigate('/login');   
         }
     }, []);
@@ -26,14 +26,14 @@ export const Dashboard = () => {
     }
 
     function formatDate(d: Date) {
-        const weekdays = ['Monday','Tuesday','Wednesday','Thurday','Friday','Saturday','Sunday'];
+        const weekdays = ['Sunday', 'Monday','Tuesday','Wednesday','Thurday','Friday','Saturday'];
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'];
-        return `${weekdays[d.getDay() - 1].slice(0, 3)} ${months[d.getMonth()].slice(0, 3)} ${d.getDate()}, ${d.getFullYear()} ${d.toLocaleTimeString()}`;
+        return `${weekdays[d.getDay()].slice(0, 3)} ${months[d.getMonth()].slice(0, 3)} ${d.getDate()}, ${d.getFullYear()} ${d.toLocaleTimeString()}`;
     }
 
 
     if (user && !loading) {
-        // // console.log(user);
+        console.log(user);
         return (
             <div className="flex flex-col h-screen">
                 <Navbar />

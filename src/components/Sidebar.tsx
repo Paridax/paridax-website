@@ -32,7 +32,7 @@ export const Sidebar = (props: {barShown: boolean}) => {
     }
 
     React.useEffect(() => {
-        // // console.log(barCompact);
+        // console.log(barCompact);
     }, [barCompact]);
 
     function SidebarListItem(props: { Icon: IconType, text: string, selector?: RegExp, redirect?: string, locked?: boolean, alert?: {col: string, msg: string}}) {

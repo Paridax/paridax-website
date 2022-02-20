@@ -25,17 +25,17 @@ export const DashboardViewBlog = (props: any) => {
 
     React.useEffect(() => {
         if (!user) {
-            // console.log('Not logged in');
+            console.log('Not logged in');
             navigate('/login');
         }
-        // console.log(user);
+        console.log(user);
         if (!user.permissions.includes('OWNER')) {
             navigate('/dashboard');
         }
         getBlog(postId)
         .then((res) => {
-            // console.log('done');
-            // console.log(res.data);
+            console.log('done');
+            console.log(res.data);
             if (!res.data) {
                 navigate('/dashboard');
             }
@@ -45,7 +45,7 @@ export const DashboardViewBlog = (props: any) => {
             setContent(res.data.postContent);
         })
         .catch((err) => {
-            // console.log(err);
+            console.log(err);
             navigate('/dashboard/blog');
         });
     }, []);

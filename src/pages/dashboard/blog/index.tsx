@@ -16,7 +16,7 @@ export const DashboardViewBlogs = () => {
     
     React.useEffect(() => {
         if (!user) {
-            // console.log('Not logged in');
+            console.log('Not logged in');
             navigate('/login');   
         }
         if (!user.permissions.includes('OWNER')) {
@@ -24,7 +24,7 @@ export const DashboardViewBlogs = () => {
         }
         getBlogs()
         .then((blogs) => {
-            // console.log(blogs.data);
+            console.log(blogs.data);
             setBlogs(blogs.data);
         });
     }, []);
@@ -36,14 +36,14 @@ export const DashboardViewBlogs = () => {
     }
 
     function formatDate(d: Date) {
-        const weekdays = ['Monday','Tuesday','Wednesday','Thurday','Friday','Saturday','Sunday'];
+        const weekdays = ['Sunday', 'Monday','Tuesday','Wednesday','Thurday','Friday','Saturday'];
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'];
         return `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()} ${d.toLocaleTimeString()}`;
     }
 
 
     if (blogs && user && !loading) {
-        // console.log(user);
+        console.log(user);
         return (
             <div>
                 <Navbar />
@@ -70,7 +70,7 @@ export const DashboardViewBlogs = () => {
                                     <p className="font-semibold text-gray-600 col-span-2 text-ellipsis overflow-hidden">Publish Timestamp</p>
                                 </div>
                                 {blogs.map((blog: any, i: any) => {
-                                    // console.log(blog);
+                                    console.log(blog);
                                     return (
                                         <button onClick={() => { navigate(`/dashboard/blog/posts/${blog.postId}`) }} className="w-full grid items-center h-12 grid-cols-10 px-2 my-1 border-2 hover:border-primary rounded duration-100 focus:border-primary" key={i}>
                                             <p className="text-left font-semibold col-span-4 w-full text-ellipsis overflow-hidden whitespace-nowrap">{blog.postTitle}</p>

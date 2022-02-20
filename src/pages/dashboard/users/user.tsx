@@ -19,24 +19,24 @@ export const DashboardViewUser = (props: any) => {
 
     React.useEffect(() => {
         if (!user) {
-            // console.log('Not logged in');
+            console.log('Not logged in');
             navigate('/login');
         }
-        // console.log(user);
+        console.log(user);
         if (!user.permissions.includes('OWNER')) {
             navigate('/dashboard');
         }
         getUser(userId)
         .then((res) => {
-            // console.log('done');
-            // console.log(res.data);
+            console.log('done');
+            console.log(res.data);
             if (!res.data) {
                 navigate('/dashboard');
             }
             setSpecific(res.data)
         })
         .catch((err) => {
-            // console.log(err);
+            console.log(err);
             navigate('/dashboard/users');
         });
     }, []);
@@ -55,7 +55,7 @@ export const DashboardViewUser = (props: any) => {
 
     async function suspendUser() {
         const updated = await updateUser(specific.userId, { ...specific, permissions: [] });
-        // console.log(updated.data);
+        console.log(updated.data);
         setSpecific(updated.data);
     }
 
@@ -66,14 +66,14 @@ export const DashboardViewUser = (props: any) => {
 
     async function allowLogin() {
         const updated = await updateUser(specific.userId, { ...specific, permissions: ['LOGIN'] });
-        // console.log(updated.data);
+        console.log(updated.data);
         setSpecific(updated.data);  
     }
 
 
     if (specific && user && !loading) {
         if (!specific.deleted) {
-            // console.log(specific);
+            console.log(specific);
             return (
                 <div>
                     <div className={`absolute w-screen h-screen flex items-center justify-around bg-gray-900 bg-opacity-25 ${confirmPopup ? `` : `hidden`}`}>

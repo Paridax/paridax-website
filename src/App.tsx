@@ -18,15 +18,15 @@ function App() {
     getUserData()
       .then(({ data }: any) => {
         if (!data.loggedIn) {
-          // console.log('Guest');
+          console.log('Guest');
           setLoading(false);
         } else {
           setUser(data);
           setLoading(false);
-          // // console.log(data);
+          // console.log(data);
         }
       }).catch((err: Error) => {
-        // // console.log(err);
+        // console.log(err);
         setApiOutage(true);
         setLoading(false);
       });

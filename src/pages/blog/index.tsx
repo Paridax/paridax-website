@@ -23,10 +23,10 @@ export const BlogSelection = (props: any) => {
     React.useEffect(() => {
         getBlogsForGuest()
             .then(({ data }: any) => {
-                // // console.log(data);
+                // console.log(data);
                 setBlogs(data);
             }).catch((err: Error) => {
-                // // console.log(err);
+                // console.log(err);
                 setLoading(false);
             });
     }, []);

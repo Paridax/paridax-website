@@ -19,7 +19,7 @@ export const Logout = () => {
             setUser(null);
             navigate('/');
         } else {
-            // console.log('Not logged in');
+            console.log('Not logged in');
             navigate('/');
         }
 
