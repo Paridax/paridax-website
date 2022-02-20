@@ -12,10 +12,6 @@ export const Sidebar = (props: {barShown: boolean}) => {
     const navigate = useNavigate();
     let barShown = props.barShown;
 
-    window.addEventListener('resize', () => {
-        window.innerWidth <= parseInt('1024') ? console.log('smaller') : console.log('bigger');
-    });
-
     const server = {
         id: '919996424417075260',
         icon: 'd5e0742f7e6dcc6b534a8e64a0fbe156',
@@ -36,7 +32,7 @@ export const Sidebar = (props: {barShown: boolean}) => {
     }
 
     React.useEffect(() => {
-        // console.log(barCompact);
+        // // console.log(barCompact);
     }, [barCompact]);
 
     function SidebarListItem(props: { Icon: IconType, text: string, selector?: RegExp, redirect?: string, locked?: boolean, alert?: {col: string, msg: string}}) {

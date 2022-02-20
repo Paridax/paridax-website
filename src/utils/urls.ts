@@ -1,2 +1,2 @@
-export const web_url = "https://advance.paridax.xyz/";
-export const api_url = "https://advance.paridax.xyz";
+export const api_url = "http://paridax.xyz";
+export const web_url = "http://paridax.xyz/";

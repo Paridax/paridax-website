@@ -6,7 +6,7 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   presets: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     screens: {
       '2xs': '420px',
@@ -995,5 +995,8 @@ module.exports = {
     zIndex: ['responsive', 'focus-within', 'focus'],
     font: ['hover'],
   },
-  plugins: [ ],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp')
+  ],
 }

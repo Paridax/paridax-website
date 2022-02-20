@@ -47,14 +47,15 @@ body {
     display: none;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    @apply bg-gray-200;
+    @apply bg-transparent;
 }
 
 ::-webkit-scrollbar-thumb {
     @apply rounded-full bg-gray-300 hover:bg-gray-400;
-} */
+}

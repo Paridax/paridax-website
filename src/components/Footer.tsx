@@ -28,9 +28,8 @@ export const Footer = () => {
                     <FooterItem text="Twitter" redirect="https://twitter.com/paridaxx" newTab />
                     <FooterItem text="Discord" redirect="https://discord.gg/TuFVPdKUE6" newTab />
                     <FooterItem text="GitHub" redirect="https://github.com/paridax" newTab />
-                    <FooterItem text="Terms & Conditions" redirect="" />
+                    <FooterItem text="Terms of Service" redirect="" />
                     <FooterItem text="Privacy Policy" redirect="" />
-                    <FooterItem text="Cookie Policy" redirect="" />
                 </div>
             </nav>
         </section>
