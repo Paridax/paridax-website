@@ -50,7 +50,7 @@ export function getBlog(blogId: any) {
 }
 
 export function getBlogForGuest(blogId: any) {
-    return axios.get(`${api_url}https://www.paridax.xyz/api/blogs/content/${blogId}`, { withCredentials: true });
+    return axios.get(`${api_url}/api/blogs/content/${blogId}`, { withCredentials: true });
 }
 
 export function updateBlogPost(blogId: any, blogData: any) {
