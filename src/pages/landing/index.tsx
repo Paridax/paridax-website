@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react';
 import '../../index.css';
 import { Navbar } from '../../components/Navbar';

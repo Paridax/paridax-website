@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getUserData } from '../utils/api';
@@ -11,7 +12,7 @@ export const Navbar = (props: { user?: any }) => {
 
 
     function getWindowLocation(windowLoc: string, exact?: boolean) {
-        let web_thing = `paridax.xyz`;
+        let web_thing = `www.paridax.xyz`;
 
         let win;
         win = window.location.href;

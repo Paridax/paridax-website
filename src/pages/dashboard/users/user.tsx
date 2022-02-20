@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as React from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ProtectedRoute } from '../../../components/ProtectedRoute';
