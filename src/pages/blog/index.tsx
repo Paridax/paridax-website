@@ -46,13 +46,13 @@ export const BlogSelection = (props: any) => {
     function BlogPost(blog: any, index: any) {
         return (
             <div className=" col-span-1 duration-150 border-t border-gray-300" key={index}>
-                <div className="mt-8 mb-2">
-                    <h1 className="text-sm font-semibold text-gray-400">{blog.postAuthor} • {unixMsStringToDate(blog.publishTimestamp)}</h1>
-                    <h1 className="text-3xl font-semibold text-gray-800">{blog.postTitle}</h1>
+                <div className="mt-8 mb-2 flex flex-col h-48">
+                    <h1 className="text-sm font-semibold text-gray-400 shrink-0">{blog.postAuthor} • {unixMsStringToDate(blog.publishTimestamp)}</h1>
+                    <h1 className="text-3xl font-semibold text-gray-800 shrink-0 line-clamp-3">{blog.postTitle}</h1>
+                    <p className="text-sm w-full h-auto overflow-hidden line-clamp-3 text-gray-600">{blog.postDescription}</p>
                 </div>
-                <p className="text-sm text-gray-600 h-24">{blog.postDescription}</p>
 
-                <button onClick={() => { navigate(`/blog/${blog.postId}`); }} className="text-md py-3 rounded-md font-semibold group transition-all flex items-center hover:brightness-120 hover:text-primary focus:text-primary w-auto">
+                <button onClick={() => { navigate(`/blog/${blog.postId}`); }} className="text-md py-2 rounded-md font-semibold group transition-all flex items-center hover:brightness-120 hover:text-primary focus:text-primary w-auto">
                     <h1>View Blog Post</h1>
                     <FaAngleRight className="ml-2 text-xl group-hover:translate-x-1 group-focus:translate-x-1 duration-150 ease-out"></FaAngleRight>
                 </button>
