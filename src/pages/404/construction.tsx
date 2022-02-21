@@ -4,7 +4,7 @@ import { Navbar } from '../../components/Navbar';
 import '../../index.css';
 import './glitch.css';
 
-export const NotFound = () => {
+export const WorkInProgress = () => {
     const navigate = useNavigate();
     
     return (
@@ -13,13 +13,13 @@ export const NotFound = () => {
                 <div className="flex items-center h-full">
                     <div className="mx-auto flex items-center gap-5">
                         <div className="wrapper">
-                            <h1 className="text-9xl text-gray-200 font-bold glitch select-none">404</h1>
+                            <h1 className="text-9xl text-gray-200 font-bold glitch select-none">WIP</h1>
                         </div>
                         <div>
                             <div className="my-1">
-                                <h1 className="text-2xl font-extrabold">THAT'S AN ERROR</h1>
+                                <h1 className="text-2xl font-extrabold">THIS PAGE ISN'T READY</h1>
                                 <p className="w-80 text-gray-600 mt-1">
-                                    It looks like the page that you were looking for doesn't exist. If you think there is a problem, please let me know.
+                                    It looks like the page that you are viewing is currently being added, or I am planning to add it in the near future. Check the blog page for more details.
                                 </p>
                             </div>
                             <div className="my-1">

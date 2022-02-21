@@ -1,9 +1,5 @@
 import * as React from 'react';
 import { Loader } from './Loader';
-import { useNavigate } from 'react-router';
-import { api_url, web_url } from '../utils/urls';
-import { Menu, Transition } from '@headlessui/react';
-import { BiChevronDown } from 'react-icons/bi';
 
 export const UserDisplay = () => {
     return (
