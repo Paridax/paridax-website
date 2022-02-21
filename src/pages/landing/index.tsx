@@ -75,62 +75,62 @@ export const Landing = (props: any) => {
             <div>
                 <Navbar />
                 <section>
-                    <div className="flex items-center justify-between gap-5 max-w-7xl px-16 py-32 mx-auto">
-                        <div className="w-3/5">
-                                <h1 className="w-3/4 text-5xl font-bold tracking-tight">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 max-w-7xl px-8 md:px-16 py-16 md:py-32 mx-auto">
+                        <div className="col-span-1">
+                            <h1 className="w-full text-3xl font-bold md:text-5xl text-left tracking-tight">
                                 The new and improved homepage of Paridax
                             </h1>
-                            <h1 className="w-3/4 text-md leading-tight mt-2">
+                            <h1 className=" text-sm sm:text-base text-left w-full leading-tight mt-2">
                                 This is my website. Everything here is managed, programmed, and maintained by me. Check out my blog or any of my other projects.<br></br>
                             </h1>
-                            <div className="w-3/4 my-8 mx-5">
+                            <div className="w-full my-8 mx-auto md:mx-5">
                                 <div className="align-items-center flex my-2">
                                     <div className="rounded-full w-2 h-2 bg-primary my-auto mx-3 shrink-0"></div>
-                                    <h1>New projects can be found on the projects page.</h1>
+                                    <h1 className="text-sm sm:text-base">New projects can be found on the projects page.</h1>
                                 </div>
 
                                 <div className="align-items-center flex my-2">
                                     <div className="rounded-full w-2 h-2 bg-primary my-auto mx-3 shrink-0"></div>
-                                    <h1>Check out the blog for any updates on the site.</h1>
+                                    <h1 className="text-sm sm:text-base">Check out the blog for any updates on the site.</h1>
                                 </div>
 
                                 <div className="align-items-center flex my-2">
                                     <div className="rounded-full w-2 h-2 bg-primary my-auto mx-3 shrink-0"></div>
-                                    <h1>Join my Minecraft server!</h1>
+                                    <h1 className="text-sm sm:text-base">Join my Minecraft server!</h1>
                                 </div>
 
                                 <div className="align-items-center flex my-2">
                                     <div className="rounded-full w-2 h-2 bg-primary my-auto mx-3 flex-wrap shrink-0"></div>
-                                    <h1>I do not make any money from this website.</h1>
+                                    <h1 className="text-sm sm:text-base">I do not make any money from this website.</h1>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-5">
-                                <button onClick={() => { navigate('/projects'); }} className="h-12 px-6 bg-primary rounded-md font-semibold group focus:ring-4 ring-primary ring-opacity-50 transition-all flex items-center text-white hover:bg-transparent hover:text-gray-800 border-2 border-primary hover:shadow-xl duration-100">
+                            <div className="flex flex-col items-center gap-5 w-full justify-center md:justify-start xs:flex-row">
+                                <button onClick={() => { navigate('/projects'); }} className="justify-center w-full xs:w-auto h-12 px-6 bg-primary rounded-md font-semibold group focus:ring-4 ring-primary ring-opacity-50 transition-all flex items-center text-white hover:bg-transparent hover:text-gray-800 border-2 border-primary hover:shadow-xl duration-100">
                                     <h1>View Projects</h1>
                                     <FaAngleRight className="ml-2 text-xl group-hover:translate-x-1 group-focus:translate-x-1 duration-150 ease-out"></FaAngleRight>
                                 </button>
-                                <button onClick={() => { window.location.href.endsWith('#posts') ? window.location.href += '' : window.location.href += '#posts'; }} className="h-12 px-6 border-2 border-primary rounded-md font-semibold group focus:ring-4 ring-primary ring-opacity-50 transition-all flex items-center hover:bg-primary hover:text-white hover:shadow-xl duration-100">
+                                <button onClick={() => { window.location.href.endsWith('#posts') ? window.location.href += '' : window.location.href += '#posts'; }} className="justify-center w-full xs:w-auto h-12 px-6 border-2 border-primary rounded-md font-semibold group focus:ring-4 ring-primary ring-opacity-50 transition-all flex items-center hover:bg-primary hover:text-white hover:shadow-xl duration-100">
                                     <h1>Read Blog</h1>
                                 </button>
                             </div>
                         </div>
-                        <div className="grow col-span-2 h-96 flex items-center">
-                            <h1 className="mx-auto font-bold">placeholder</h1>
+                        <div className="grid-cols-1 h-64 md:h-96 items-center hidden md:flex">
+                            <h1 className="w-full flex justify-around font-bold">placeholder</h1>
                         </div>
                     </div>
                 </section>
                 <section id="advance" className="bg-offwhite py-14">
                     <div className="justify-between gap-5 max-w-7xl px-16 pb-8 mx-auto">
-                        <h1 className="font-semibold my-2 text-primary">PROJECT SHOWCASE - ADVANCE BOT</h1>
-                        <div className=" items-center max-w-7xl mx-auto grid grid-cols-2 gap-5">
-                            <div className=" col-span-1 pt-2 ">
-                                <h1 className="text-4xl font-medium">Advance is the best way to kickstart and boost your Discord community.</h1>
+                        <h1 className="font-semibold my-2 text-primary">PROJECT SHOWCASE</h1>
+                        <div className="items-center max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div className="col-span-1 pt-2">
+                                <h1 className="text-2xl md:text-4xl font-semibold">Advance is the best way to kickstart and boost your Discord community.</h1>
                             </div>
-                            <div className="col-span-1 justify-end flex pl-12">
+                            <div className="col-span-1 justify-end flex md:pl-12">
                                 <p>Advance is a shiny new Discord bot developed by Paridax, and can help boost your Discord server. Whether it's just a group of friends or a massive thriving community, Advance packs modules for everything you could need, and is totally free.</p>
                             </div>
                         </div>
-                        <div className="grid grid-cols-4 mt-14 mb-5 gap-5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-14 mb-5 gap-5">
                                 <ProjectBullet Icon={FaServer} title="Low Latency" description="Advance uses Discord.js version 13 and Mongo Database, and is hosted on-location which means no delay between commands and data. Get what you need, when you need it."></ProjectBullet>
                                 <ProjectBullet Icon={FaDollarSign} title="Always Free" description="Advance is totally free, and I plan to continue updating it. If you would like to support me, consider donating on Patreon."></ProjectBullet>
                                 <ProjectBullet Icon={RiSoundModuleFill} title="Modular" description="With totally customizable options, Advance lets you only use what you need to. Advance has modules for music, moderation, entertainment and more!"></ProjectBullet>
@@ -144,8 +144,11 @@ export const Landing = (props: any) => {
                 </section>
                 <section id="posts" className="py-5">
                     <div className="items-center justify-between gap-5 max-w-7xl px-16 mx-auto">
-                        <h1 className="font-semibold my-2 text-primary">LATEST UPDATES</h1>
-                        <div className="grid grid-cols-3 gap-8 my-4">
+                        <div className="w-full items-center justify-between flex">
+                            <h1 className="font-semibold my-2 text-primary">LATEST UPDATES</h1>
+                            <button onClick={() => { navigate('/blog') }} className="font-semibold my-2 text-gray-400 hover:text-primary focus:text-primary transition-all">View All</button>
+                        </div>
+                        <div className="grid grid-cols-1 sm:px-12 md:grid-cols-2 lg:grid-cols-3 gap-8 my-4">
                             {blogs ? blogs.map((blog: any, i: any) => {
                                 return BlogPost(blog, i);
                             }) : 

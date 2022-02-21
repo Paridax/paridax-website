@@ -14,6 +14,8 @@ function App() {
   const [loading, setLoading] = React.useState(true);
   const [apiOutage, setApiOutage] = React.useState(false);
 
+  console.log(window.location.protocol + '//' + window.location.host);
+
   React.useEffect(() => {
     getUserData()
       .then(({ data }: any) => {
