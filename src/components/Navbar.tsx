@@ -23,7 +23,7 @@ export const Navbar = (props: { user?: any }) => {
             if (window.location.pathname === windowLoc) return true;
             return false;
         }
-        if (window.location.pathname.includes(`${windowLoc}`)) return true;
+        if (window.location.pathname.startsWith(`${windowLoc}`)) return true;
         return false;
     }
 
