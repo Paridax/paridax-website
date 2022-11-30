@@ -22,7 +22,7 @@
     "react-inlinesvg": "^2.3.0",
     "react-router-dom": "^6.0.2",
     "react-scripts": "^5.0.0",
-    "typescript": "^4.4.4",
+    "typescript": "^4.8.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
